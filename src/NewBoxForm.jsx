@@ -1,5 +1,14 @@
 import { useState } from "react";
 
+
+/**NewBoxForm: Handles adding box
+ *
+ * Props: addBox function from BoxList
+ *
+ * State: formData
+ *
+ * App => Boxlist => NewBoxForm
+ */
 function NewBoxForm({ addBox }) {
     const initialState = { width: 0, height: 0, color: "" };
     const [formData, setFormData] = useState(initialState);
@@ -21,8 +30,6 @@ function NewBoxForm({ addBox }) {
             [name]: value,
         }));
     }
-
-
 
     return (
         <form onSubmit={handleSubmit}>
